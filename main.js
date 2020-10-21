@@ -28,5 +28,27 @@ function addZero(n) {
     return (parseInt(n, 10) < 10 ? '0' : '') + n;
 }
 
+//Set background and Greeting
+function setBgGreet () {
+    let today = new Date();
+    let hour = today.getHours();
+
+    if(hour < 12) {
+        //Morning
+        document.body.style.backgroundImage = "url('img/morning/1.jpg')";
+        greeting.textContent = 'Good Morning'
+    } else if (hour < 18) {
+        // Afternoon
+        document.body.style.backgroundImage = "url('img/afternoon/1.jpg')";
+        greeting.textContent = 'Good Afternoon'
+    } else {
+        //Evening
+        document.body.style.backgroundImage = "url('img/night/1.jpg')";
+        greeting.textContent = 'Good Night'
+        document.body.style.color = 'white';
+    }
+}
+
 // Run
 showTime();
+setBgGreet();
