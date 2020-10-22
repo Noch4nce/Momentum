@@ -20,6 +20,10 @@ body {
     font-size: 8rem;
 }
 
+.date {
+    font-size: 3rem;
+}
+
 h1 {
     margin-bottom: 3rem;
 }
