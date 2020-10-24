@@ -1,0 +1,164 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    font-family: 'Josefin Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+    background-size: cover;
+    color: #ffffff;
+    transition: background-image 1s ease-in-out;
+}
+
+.time {
+    font-size: 8rem;
+}
+
+.date {
+    font-size: 3rem;
+}
+
+h1 {
+    margin-bottom: 3rem;
+}
+
+h2 {
+    margin-bottom: 0.5rem;
+}
+
+@media (max-width: 700px) {
+    .time {
+      font-size: 6rem;
+    }
+}
+
+.content {
+    padding: 1rem 3rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bgBtn {
+    width: 100%;
+}
+
+.btn {
+    width: 60px;
+    height: 60px;
+    border: 0;
+    background: url("../img/btn.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    filter: grayscale(1);
+    margin: 10px;
+    transition: 0.5s;
+}
+.btn:hover {
+    filter: grayscale(.8);
+    cursor: pointer;
+    width: 70px;
+    height: 70px;
+}
+.btn:active,
+.btn:focus {
+    outline: 0;
+}
+.btn:active{
+    transform: scale(1.02)
+}
+
+.quote {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+}
+
+.btnQuote {
+    width: 60px;
+    height: 60px;
+    border: 0;
+    background: url(../img/quoteBtn.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    filter: grayscale(1);
+}
+
+.btnQuote:hover {
+    filter: grayscale(.8);
+    cursor: pointer;
+}
+  .btnQuote:active,
+  .btnQuote:focus {
+    outline: 0;
+}
+  .btnQuote:active{
+    transform: scale(1.02)
+}
+
+.weather__wrapper {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.5rem;
+}
+
+.city {
+    font-size: 2rem;
+    transition: 0.4s;
+}
+
+.city:hover {
+    border: 1px solid #faf9ca;
+    border-radius: 10%;
+}
+
+.wind_wrap {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.temper_wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.weather-icon {
+    font-size: 60px;
+    color: #c5f3fc;
+    transition: 0.6s;
+}
+
+.weather-icon:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.45), 0 10px 10px rgba(0,0,0,0.42);
+}
+
+.temperature {
+    font-size: 2rem;
+}
+
+.temperature:hover {
+    color:#aef2d3;
+}
+
+.wind_img {
+    width: 40px;
+    height: 40px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: 0.6s;
+}
+
+.wind_img:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.45), 0 10px 10px rgba(0,0,0,0.42);
+}
+

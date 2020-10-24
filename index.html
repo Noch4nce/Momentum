@@ -4,23 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Momentum</title>
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/owfont-regular.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <time class="time"></time>
 
-    <time class="date">Sunday, 21 october</time>
+    <time class="date">Sunday, 21 october <span id="hour"></span></time>
 
     <h1>
         <span class="greeting"></span>
-        <div class="name" contenteditable="true"></div>
+        <div class="name" contenteditable="true">[Enter Name]</div>
     </h1>
 
     <h2>
         <span>What Is Your Focus For Today?</span>
         <div class="focus" contenteditable="true"></div>
     </h2>
+
+    <div class="bgBtn">
+        <button class="btn">   </button>
+    </div>
+
+    <div class="content">
+        <div>
+            <figure class="quote">
+                <blockquote>
+                  You were not born a winner, and you were not born a loser. You are what you make yourself be.
+                </blockquote>
+                <figcaption>
+                  Lou Holtz
+                </figcaption>
+            </figure>
+
+            <button class="btnQuote">   </button>
+        </div>
+
+        <div class="weather__wrapper">
+            <div class="city" contenteditable="true"></div>
+            <div class="temper_wrap">
+                <i class="weather-icon owf"></i>
+                <div class="temperature"></div>
+            </div>
+            <div class="weather-description"></div>
+            <div class="humidity"></div>
+            <div class="wind_wrap">
+                <span><img class="wind_img" src="img/wind.png" alt="wind"></span>
+                <div class="wind"></div>
+            </div>
+        </div>
+    </div>
 
     <script src="main.js"></script>
 </body>
