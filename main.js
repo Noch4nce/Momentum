@@ -263,19 +263,17 @@ async function getWeather() {
 function getWeatherName () {
     if(localStorage.getItem('city') === null) {
         city.textContent = 'Minsk';
+        localStorage.setItem('city', 'Minsk');
     } else {
         city.textContent = localStorage.getItem('city');
     }
 }
 
 function setWeatherName (e) {
-    if (city.textContent === '') {
-        city.textContent = localStorage.getItem('city');
-    }
-
     if(e.type === 'keypress') {
         if(e.which == 13 || e.keyCode == 13) {
-            if (e.target.innerText === '') {
+            if (e.target.innerText.trim() === '') {
+                e.preventDefault();
                 localStorage.setItem('city', 'Minsk');
                 city.blur();
             } else {
@@ -285,8 +283,17 @@ function setWeatherName (e) {
             getWeather();
         }
     } else {
-        localStorage.setItem('city', e.target.innerText);
+        if (e.target.innerText.trim() === '') {
+            city.textContent = localStorage.getItem('city');
+        } else {
+            localStorage.setItem('city', e.target.innerText);
+            city.blur();
+        }
     }
+}
+
+function enterWeatherName () {
+    city.textContent = '';
 }
 
 
@@ -308,6 +315,7 @@ btnQuote.addEventListener('click', getQuote);
 
 city.addEventListener('keypress', setWeatherName);
 city.addEventListener('blur', setWeatherName);
+city.addEventListener('click', enterWeatherName);
 
 // Run
 showTime();
