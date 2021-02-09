@@ -244,7 +244,7 @@ async function getQuote() {
 
 async function getWeather() {
     try {
-        const url = `http://api.openweathermap.org/data/2.5/weather?q=${city.textContent}&appid=c14397025b0f0a2f1f7bb192bdfce199&units=metric`;
+        const url = `https://api.openweathermap.org/data/2.5/weather?q=${city.textContent}&appid=c14397025b0f0a2f1f7bb192bdfce199&units=metric`;
         const response = await fetch(url);
         const data = await response.json();
 
@@ -262,8 +262,8 @@ async function getWeather() {
 
 function getWeatherName () {
     if(localStorage.getItem('city') === null) {
-        city.textContent = 'Minsk';
-        localStorage.setItem('city', 'Minsk');
+        city.textContent = 'Ekaterinburg';
+        localStorage.setItem('city', 'Ekaterinburg');
     } else {
         city.textContent = localStorage.getItem('city');
     }
@@ -274,7 +274,7 @@ function setWeatherName (e) {
         if(e.which == 13 || e.keyCode == 13) {
             if (e.target.innerText.trim() === '') {
                 e.preventDefault();
-                localStorage.setItem('city', 'Minsk');
+                localStorage.setItem('city', 'Ekaterinburg');
                 city.blur();
             } else {
                 localStorage.setItem('city', e.target.innerText);
